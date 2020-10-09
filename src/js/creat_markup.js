@@ -1,2 +1,8 @@
 import menu from './menu.json';
-import foodService from '../templates/food_service.hbs';
+import foodServiceTpl from '../templates/food_service.hbs';
+
+const galleryMenu = document.querySelector('ul.js-menu');
+
+const markupMenu = foodServiceTpl(menu)
+
+galleryMenu.insertAdjacentHTML('beforeend', markupMenu);
