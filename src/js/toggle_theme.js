@@ -17,12 +17,12 @@ function onChangeTheme() {
     if (toggleTheme.checked === true) {
         body.classList.remove(Theme.LIGHT);
         body.classList.add(Theme.DARK);
-        localStorage.setItem('siteTheme', true)
+        localStorage.setItem('siteTheme', 'DARK')
         
     } else {
         body.classList.add(Theme.LIGHT);
         body.classList.remove(Theme.DARK);
-        localStorage.setItem('siteTheme', false)
+        localStorage.setItem('siteTheme', 'LIGHT')
         
     }
    
@@ -30,7 +30,7 @@ function onChangeTheme() {
 
 function currentTheme() {
     const siteCurrentTheme = localStorage.getItem('siteTheme');
-    if (siteCurrentTheme === 'true') {
+    if (siteCurrentTheme === 'DARK') {
         body.classList.add(Theme.DARK);
         toggleTheme.checked = true;
     }
