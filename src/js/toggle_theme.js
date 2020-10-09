@@ -9,7 +9,10 @@ const body = document.querySelector('body');
 body.classList.add(Theme.LIGHT);
 
 toggleTheme.addEventListener('change', onChangeTheme);
+
 currentTheme();
+
+
 function onChangeTheme() {
     if (toggleTheme.checked === true) {
         body.classList.remove(Theme.LIGHT);
